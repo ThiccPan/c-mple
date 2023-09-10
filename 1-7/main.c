@@ -10,17 +10,12 @@ int main()
 
     while ((c = getchar()) != EOF)
     {
-        if (c == ' ')
-        {
+        if (c != ' ')
             spaceCount++;
-            if (spaceCount < 2)
-            {
-                putchar(c);
-            }
+        else
+            spaceCount = 0;
+        if (spaceCount > 1)
             continue;
-        }
-        
-        spaceCount = 0;
         putchar(c);
     }
     printf("space count: %i\n", spaceCount);
